@@ -5,4 +5,17 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
 
+    <!-- HOME -->
+    <string name="Login">Login</string>
+
+    <!-- LOGIN -->
+    <string name="Login_User">Email:</string>
+    <string name="Login_Password">Contraseña:</string>
+    <string name="Login_Access">Acceder</string>
+    <string name="Login_New_User">Nuevo Usuario</string>
+
+    <!-- RECLOGIN -->
+    <string name="text">No me llegan datos</string>
+
+
 </resources>
