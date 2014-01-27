@@ -1,4 +1,4 @@
-package com.example.gertu;
+package com.gertu.mobile;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;

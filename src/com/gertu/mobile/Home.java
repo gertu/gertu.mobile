@@ -1,22 +1,17 @@
-package com.example.gertu;
+package com.gertu.mobile;
 
-import com.example.gertu.R;
-import java.util.ArrayList;
-import java.util.HashMap;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import android.view.Menu;
 import android.annotation.TargetApi;
 import android.app.ListActivity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.AsyncTask;
-import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -24,6 +19,18 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 
 @TargetApi(19)
 public class Home extends ListActivity {
@@ -38,7 +45,6 @@ public class Home extends ListActivity {
     private static final String TAG_NAME = "name";
     private static final String TAG_PRICE = "price";
     private static final String TAG_SHOP  = "shop";
-
     // contacts JSONArray
 
 
@@ -107,11 +113,12 @@ public class Home extends ListActivity {
 
         @Override
         protected Void doInBackground(Void... arg0) {
+            
             // Creating service handler class instance
             ServiceHandler sh = new ServiceHandler();
-
+            
             String jsonStr = sh.makeServiceCall(url, ServiceHandler.GET);
-
+            
             Log.d("Response: ", "> " + jsonStr);
 
             /* DEMO DATA -> With server running delete the next line of code */

@@ -1,10 +1,9 @@
-package com.example.gertu;
+package com.gertu.mobile;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
-import com.example.gertu.R;
 
 public class SingleDealActivity  extends Activity {
 
