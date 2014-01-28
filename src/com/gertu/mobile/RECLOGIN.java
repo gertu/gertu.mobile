@@ -1,4 +1,6 @@
-package com.example.gertu;
+package com.gertu.mobile;
+
+import com.gertu.mobile.R;
 
 import android.os.Bundle;
 import android.app.Activity;
