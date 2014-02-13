@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+    <!-- Name Label -->
+    <TextView android:id="@+id/name_label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dip"
+        android:textStyle="bold"
+        android:paddingTop="5dip"
+        android:paddingBottom="5dip"
+        android:textColor="#43bd00"/>
+    <!-- Description Label -->
+    <TextView android:id="@+id/description_label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"/>
+    <!-- Shop Label -->
+    <TextView android:id="@+id/shop_label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"/> 
+    <!-- Comment Label -->
+    <TextView android:id="@+id/comment_label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"/>            
+    <!-- Price Label -->
+    <TextView android:id="@+id/price_label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#acacac"/>
+    <!-- Image Label -->     
+     <ImageView 
+        android:id="@+id/imgDeal"
+        android:layout_width="300dip"
+        android:layout_height="250dip"
+        android:layout_gravity="center_vertical"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_launcher"/>  
+    <!-- Reservation -->
+	<Button
+    	android:id="@+id/btnReservation"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="@string/Reservation_Deal"
+        android:layout_marginTop="10dip"/>   	
+	
+</LinearLayout>
