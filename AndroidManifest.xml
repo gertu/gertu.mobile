@@ -8,7 +8,7 @@
         android:minSdkVersion="10"
         android:targetSdkVersion="19" />
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -24,13 +24,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-                android:name="com.gertu.mobile.Login">
-
+        <activity android:name="com.gertu.mobile.Login" >
         </activity>
-        <activity
-                android:name="com.gertu.mobile.RECLOGIN">
-
+        <activity android:name="com.gertu.mobile.RECLOGIN" >
+        </activity>
+        <activity android:name="com.gertu.mobile.SingUp" >
+        </activity>
+        <activity android:name="com.gertu.mobile.SingleDealActivity" >
+        </activity>
+        <activity android:name="com.gertu.mobile.Reservation">
         </activity>
     </application>
 

@@ -14,5 +14,22 @@
 
     <!-- RECLOGIN -->
     <string name="text">No me llegan datos</string>
+    <string name="Reservation_Deal">Reservar</string>
+    <string name="title_activity_reservation">Reservation</string>
+    
+    <!-- Reservation -->
+    <string name="Aceptar">OK</string>    
+    <string name="Cancelar">Cancel</string>
+    <string name="title_activity_single_deal">SingleDealActivity</string>
+    <string name="title_activity_sing_up">SingUp</string>
+
+    <!-- SingUp -->
+    <string name="EMAIL_SINGUP">Email:</string>
+    <string name="FIRSTNAME_SINGUP">First Name:</string>
+    <string name="LASTNAME_SINGUP">Last Name:</string>
+    <string name="PASS_SINGUP">Password:</string>
+    <string name="RPTPASS_SINGUP">Repeat Password:</string>
+    <string name="BUTTON_SINGUP">Registro</string>
+    <string name="REGISTRO">Realizando el registro</string>   
 
 </resources>
