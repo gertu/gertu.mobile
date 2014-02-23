@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    
+    <TextView
+        android:layout_width="100dip"
+        android:layout_height="wrap_content"
+        android:text="@string/EMAIL_EDITUSER"
+        android:textStyle="bold" />
+
+   <EditText
+        android:id="@+id/editUserEmail"
+        android:layout_width="150dip"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:inputType="textEmailAddress"
+        android:maxLength="20" />
+
+    <TextView
+        android:layout_width="100dip"
+        android:layout_height="wrap_content"
+        android:text="@string/FIRSTNAME_EDITUSER"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editUserFName"
+        android:layout_width="150dip"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:inputType="text"
+        android:maxLength="20" />
+
+    <TextView
+        android:layout_width="100dip"
+        android:layout_height="wrap_content"
+        android:text="@string/LASTNAME_EDITUSER"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editUserLName"
+        android:layout_width="150dip"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:inputType="text"
+        android:maxLength="20" />
+   
+    <Button
+        android:id="@+id/btnEditUser"
+        android:layout_width="150dip"
+        android:layout_height="40dip"
+        android:gravity="center"
+        android:enabled="true"
+        android:text="@string/BUTTON_EDITUSER"
+        android:textColor="#FFFFFF" />
+    
+    
+</LinearLayout>
+

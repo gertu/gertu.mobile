@@ -2,6 +2,47 @@
 <resources>
 
     <string name="app_name">Gertu</string>
-    <string name="action_settings">Entrar</string>
+    <string name="action_adjustUser">Editar usuario</string>
+    <string name="action_login">Login</string>
+    <string name="action_settings"></string>
+
+    <!-- LOGIN -->
+    <string name="Login_User">Email:</string>
+    <string name="Login_Password">Contraseña:</string>
+    <string name="Login_Access">Acceder</string>
+    <string name="Login_New_User">Nuevo Usuario</string>
+    <string name="Login_UserAdjust">Ajuste de Usuario</string>
+
+    <!-- RECLOGIN -->
+    <string name="text">No me llegan datos</string>
+    <string name="Reservation_Deal">Reservar</string>
+    <string name="title_activity_reservation">Reservation</string>
+
+    <!-- Preference framework strings. -->
+    <string name="Aceptar">OK</string>
+    <!-- Preference framework strings. -->
+    <string name="Cancelar">Cancel</string>
+    <string name="title_activity_single_deal">SingleDealActivity</string>
+    <string name="title_activity_sing_up">SingUp</string>
+    
+    <!-- SingUp -->
+     <string name="EMAIL_SINGUP">Email:</string>
+    <string name="FIRSTNAME_SINGUP">First Name:</string>
+    <string name="LASTNAME_SINGUP">Last Name:</string>
+    <string name="PASS_SINGUP">Password:</string>
+    <string name="RPTPASS_SINGUP">Repeat Password:</string>
+    <string name="BUTTON_SINGUP">Registro</string>
+    
+    <string name="REGISTRO">Realizando el registro</string>
+    
+    
+
+    <!-- EditUser -->
+    <string name="EMAIL_EDITUSER">Email:</string>
+    <string name="FIRSTNAME_EDITUSER">First Name:</string>
+    <string name="LASTNAME_EDITUSER">Last Name:</string>
+    <string name="BUTTON_EDITUSER">Editar datos usuario</string>
+    <string name="BUTTON_EDITPASS">Editar password</string>
+
 
 </resources>

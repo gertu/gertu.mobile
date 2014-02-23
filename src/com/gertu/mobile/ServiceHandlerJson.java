@@ -15,6 +15,7 @@ public class ServiceHandlerJson {
 
 
     static String response = "";
+    public final static int GET = 1;
     public final static int POST = 2;
 
     public ServiceHandlerJson() {
