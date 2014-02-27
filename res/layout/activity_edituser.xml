@@ -3,15 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#272727"
     android:gravity="center"
     android:orientation="vertical" >
 
     
     <TextView
+        android:paddingBottom="2dip"
+        android:paddingTop="6dip"
+        android:textColor="#7DC24F"
+        android:textSize="16sp"
         android:layout_width="100dip"
         android:layout_height="wrap_content"
         android:text="@string/EMAIL_EDITUSER"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal" />
 
    <EditText
         android:id="@+id/editUserEmail"
@@ -19,13 +25,22 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:inputType="textEmailAddress"
-        android:maxLength="20" />
+        android:maxLength="20"
+        android:paddingBottom="2dip"
+        android:paddingTop="6dip"
+        android:textColor="#7DC24F"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
 
     <TextView
         android:layout_width="100dip"
         android:layout_height="wrap_content"
         android:text="@string/FIRSTNAME_EDITUSER"
-        android:textStyle="bold" />
+        android:paddingBottom="2dip"
+        android:paddingTop="6dip"
+        android:textColor="#7DC24F"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
 
     <EditText
         android:id="@+id/editUserFName"
@@ -33,13 +48,22 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:inputType="text"
-        android:maxLength="20" />
+        android:maxLength="20"
+        android:paddingBottom="2dip"
+        android:paddingTop="6dip"
+        android:textColor="#7DC24F"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
 
     <TextView
         android:layout_width="100dip"
         android:layout_height="wrap_content"
         android:text="@string/LASTNAME_EDITUSER"
-        android:textStyle="bold" />
+        android:paddingBottom="2dip"
+        android:paddingTop="6dip"
+        android:textColor="#7DC24F"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
 
     <EditText
         android:id="@+id/editUserLName"
@@ -47,7 +71,12 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:inputType="text"
-        android:maxLength="20" />
+        android:maxLength="20"
+        android:paddingBottom="2dip"
+        android:paddingTop="6dip"
+        android:textColor="#7DC24F"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
    
     <Button
         android:id="@+id/btnEditUser"

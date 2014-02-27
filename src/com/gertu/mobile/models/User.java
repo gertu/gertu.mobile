@@ -6,17 +6,22 @@ public class User {
 	private String lastName;
 	private String _id=null;
 	private String email;
-	
-	public User() {
+    private String token;
+    private String image;
+
+
+    public User() {
 		
 	}
 	
-	public User(String firstName, String lastName, String _id, String email) {
+	public User(String firstName, String lastName, String _id, String email, String token, String image) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this._id = _id;
 		this.email = email;
+        this.token = token;
+        this.image = image;
 	}
 	
 	public String getFirstName() {
@@ -25,6 +30,12 @@ public class User {
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
+    public String getToken() {
+        return token;
+    }
+    public void setToken(String token) {
+        this.token = token;
+    }
 	public String getLastName() {
 		return lastName;
 	}
@@ -43,8 +54,14 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+    public String getImage() {
+        return image;
+    }
+    public void setImage(String image) {
+        this.image = image;
+    }
 	public boolean isId(){
-    	if(this._id!= null)
+    	if(this._id != null)
     		return true;
     	else
     		return false;

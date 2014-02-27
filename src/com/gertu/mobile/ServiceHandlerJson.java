@@ -14,9 +14,8 @@ import java.io.UnsupportedEncodingException;
 public class ServiceHandlerJson {
 
 
-    static String response = "";
-    public final static int GET = 1;
     public final static int POST = 2;
+    static String response = "";
 
     public ServiceHandlerJson() {
 

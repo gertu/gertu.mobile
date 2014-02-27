@@ -1,37 +1,36 @@
 package com.gertu.mobile;
 
-import java.io.UnsupportedEncodingException;
-import com.gertu.mobile.models.User;
-import org.apache.http.entity.StringEntity;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import com.google.gson.Gson;
-
 import android.annotation.SuppressLint;
-import android.os.AsyncTask;
-import android.os.Bundle;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import org.apache.http.entity.StringEntity;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.UnsupportedEncodingException;
 
 @SuppressLint("WrongViewCast")
 public class Login extends Activity {
 	
-	EditText ed;
-	String texto;
-	EditText ed2;
-	String texto2;
-	//int idUser;
-	
+	EditText editEmail;
+	EditText editPass;
+	String email;
+	String pass;
+	public String nombreUsuario;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
-		
 		Button boton = (Button) findViewById (R.id.btnAccess);
         boton.setOnClickListener(new Button.OnClickListener()
         
@@ -41,16 +40,25 @@ public class Login extends Activity {
             	
             	
             	
-            	ed = (EditText) findViewById(R.id.edtUser);
-            	texto = ed.getText().toString();
-            	ed2 = (EditText) findViewById(R.id.edtPassword);
-            	texto2 = ed2.getText().toString();
-            	new loginAsyncTask().execute();
-            	Intent i = new Intent (getApplicationContext(), Home.class);
-//            	i.putExtra("clave", texto);
-//            	i.putExtra("pass", texto2);
-            	//i.putExtra("_id", idUser);
-                startActivity(i);
+            	editEmail = (EditText) findViewById(R.id.editEmailLogin);
+            	editPass = (EditText) findViewById(R.id.edittPasswordLogin);
+
+            	
+            	if (isEmailValid(editEmail.getText().toString())){
+    				if(!editPass.getText().toString().isEmpty()){				
+    					if(editPass.getText().length()>=6){ 
+    						new loginAsyncTask().execute();
+                        }
+    					else{
+    						editPass.setText("");
+    						Toast toast = Toast.makeText(getApplicationContext(), "La contraseña no es igual o es mayor a 6 caracteres" , Toast.LENGTH_LONG);
+    						toast.show();
+    					}
+    				}
+    			}else{
+    				editEmail.setText("");
+    			}
+            	
             }
         });
         
@@ -67,24 +75,9 @@ public class Login extends Activity {
                 startActivity(i);
             }
         });
-     /*   
-        Button btnAdjustUser= (Button) findViewById(R.id.btnEditAdjust);
-        btnAdjustUser.setOnClickListener(new Button.OnClickListener()
-        {
 
-			@Override
-			public void onClick(View v) {
-				
-				Intent i = new Intent(getApplicationContext(), EditUser.class);
-            
-                startActivity(i);
-				
-			}
-        	
-        });
-       */
 	}
-	private class loginAsyncTask extends AsyncTask<Void, Void, Void>    {		 
+	private class loginAsyncTask extends AsyncTask<Void, Void, Boolean>    {		 
         
 		
 		private ProgressDialog pDialog;
@@ -101,13 +94,14 @@ public class Login extends Activity {
         }
  
         @Override
-        protected Void doInBackground(Void... params1) {
+        protected Boolean doInBackground(Void... params1){
+        	Boolean userIdent = null;
         	String jsonStr;
         	ServiceHandlerJson shj = new ServiceHandlerJson();
         	JSONObject jO = new JSONObject();
         	try {
-        		jO.put("email", texto);
-        		jO.put("password", texto2);
+        		jO.put("email", editEmail.getText().toString());
+        		jO.put("password", editPass.getText().toString());
         	} catch (JSONException e){
         		e.printStackTrace();
         	}
@@ -117,44 +111,68 @@ public class Login extends Activity {
         	} catch (UnsupportedEncodingException e) {
         		e.printStackTrace();
         	}
-        	System.out.println("before of call Json");
         	jsonStr = shj.makeServiceCall("http://10.0.2.2:3000/mobile/v1/users/session",ServiceHandlerJson.POST, se);
-            try {
+        	Log.d("User", jsonStr);
+        	try {
             	
-                //Gson gson = new Gson();
+                if(jsonStr=="403"){
+             
+    				userIdent=false;
+                		
+                }else
+                {
+                	System.out.println(jsonStr.toString());
+                 	JSONObject user = new JSONObject(jsonStr);
 
-                //convert java object to JSON format
-               
-            	//String json = gson.toJson(jsonStr);
+                    if (user.has("firstName")){
+                        Home.getUser().setFirstName(user.getString("firstName"));
+                    } else {
+                        Home.getUser().setFirstName(user.getString("email"));
+                    }
+                    if (user.has("lastName")){
+                        Home.getUser().setLastName(user.getString("lastName"));
+                    }
+                    if (user.has("_id")){
+                        Home.getUser().set_id(user.getString("_id"));
+                    }
 
-                //System.out.println(json);
-                //JSONObject user = new JSONObject(json);
-                System.out.println(jsonStr);
-            	JSONObject user = new JSONObject(jsonStr);
-            	
-				Home.user.setFirstName(user.getString("firstName"));
-				//System.out.println(Home.user.getFirstName());
-        		Home.user.setLastName(user.getString("lastName"));
-        		Home.user.set_id(user.getString("_id"));
-        		System.out.println(Home.user.get_id());
-        		Home.user.setEmail(user.getString("email"));
-				String firstName = user.getString("firstName");
-				//idUser = user.getInt("_id");
-				System.out.println(firstName);
+                    Home.getUser().setEmail(user.getString("email"));
+                    Home.getUser().setToken(user.getString("token"));
+                    Home.getUser().setImage(user.getString("picture"));
+
+                    if (user.has("firstName")){
+                        nombreUsuario = " " + user.getString("firstName");
+                    } else {
+                        nombreUsuario = " " + user.getString("email");
+                    }
+                    userIdent=true;
+     				
+                }
 			} catch (JSONException e) {
-				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
-			}
-        	//System.out.println(jsonStr);
-			return null;      	       
+			}   	
+        	
+			return userIdent;      	       
 			            
         } 
         
-        @Override
-        protected void onPostExecute(Void result) {
+        protected void onPostExecute(Boolean userIdent) {
+        	
         	if (pDialog.isShowing())
                 pDialog.dismiss();       	       	
-        	        	
+
+        	if(userIdent){
+        		/*Intent i = new Intent (getApplicationContext(), Home.class);
+                startActivity(i);*/
+        	}else{
+                Toast.makeText(getApplicationContext(), "Usuario o contraseña incorrectos",
+                        Toast.LENGTH_LONG).show();
+            }
+            finish();
         }
-    }   
+    }  
+	private boolean isEmailValid(CharSequence email) {
+		   return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
+	}
 }

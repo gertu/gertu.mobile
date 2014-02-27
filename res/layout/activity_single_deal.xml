@@ -1,54 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp">
+    android:background="#272727"
+    android:padding="10dp"
+    android:weightSum="1">
     <!-- Name Label -->
-    <TextView android:id="@+id/name_label"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20dip"
-        android:textStyle="bold"
-        android:paddingTop="5dip"
-        android:paddingBottom="5dip"
-        android:textColor="#43bd00"/>
-    <!-- Description Label -->
-    <TextView android:id="@+id/description_label"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"/>
-    <!-- Shop Label -->
-    <TextView android:id="@+id/shop_label"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"/> 
-    <!-- Comment Label -->
-    <TextView android:id="@+id/comment_label"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"/>            
-    <!-- Price Label -->
-    <TextView android:id="@+id/price_label"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textColor="#acacac"/>
-    <!-- Image Label -->     
-     <ImageView 
-        android:id="@+id/imgDeal"
-        android:layout_width="300dip"
-        android:layout_height="250dip"
-        android:layout_gravity="center_vertical"
-        android:scaleType="fitCenter"
-        android:src="@drawable/ic_launcher"/>  
-    <!-- Reservation -->
-	<Button
-    	android:id="@+id/btnReservation"
-        android:layout_width="200dip"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:text="@string/Reservation_Deal"
-        android:layout_marginTop="10dip"/>   	
-	
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView" >
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#272727"
+            android:padding="10dp"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/name_label"
+                android:text="string/offer_tag"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dip"
+                android:paddingTop="6dip"
+                android:textColor="#7DC24F"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+            <!-- Price Label -->
+            <TextView
+                android:id="@+id/price_label"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dip"
+                android:paddingTop="6dip"
+                android:textColor="#7DC24F"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="string/price_tag" />
+            <!-- Shop Label -->
+            <TextView
+                android:id="@+id/shop_label"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dip"
+                android:paddingTop="6dip"
+                android:textColor="#7DC24F"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="string/shop_tag" />
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:id="@+id/imageView"
+                android:layout_gravity="center_horizontal"
+                android:maxHeight="150dp"
+                android:maxWidth="150dp" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Reservar"
+                android:id="@+id/buttonReserv"
+                android:textColor="#7DC24F"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:background="#ff33677f" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dip"
+                android:paddingTop="6dip"
+                android:textColor="#7DC24F"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="@string/comment_tag"
+                android:id="@+id/textView" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:background="#ff2f2f2f"
+                android:id="@+id/editTextComment"
+                android:layout_weight="0.28" />
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratingBar"
+                android:layout_gravity="center_horizontal"
+                android:clickable="false" />
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/send_comment_tag"
+                android:id="@+id/buttonComment"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#7DC24F"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:background="#ff33677f"
+                android:singleLine="false" />
+            </LinearLayout>
+    </ScrollView>
 </LinearLayout>

@@ -1,34 +1,22 @@
 package com.gertu.mobile;
 
 
-import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-
-import org.apache.http.HttpRequest;
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import android.os.AsyncTask;
-import android.os.Bundle;
-import android.os.ResultReceiver;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.view.Menu;
+import android.os.AsyncTask;
+import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import org.apache.http.entity.StringEntity;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.UnsupportedEncodingException;
 
 public class SingUp extends Activity implements OnClickListener{
    
@@ -77,7 +65,7 @@ public class SingUp extends Activity implements OnClickListener{
 					else{
 						edtPassword.setText("");
 						edtRptPassword.setText("");
-						Toast toast = Toast.makeText(getApplicationContext(), "La contraseña no es igual o es mayor a 6 caracteres" , Toast.LENGTH_LONG); 
+						Toast toast = Toast.makeText(getApplicationContext(), "La contraseÃ±a no es igual o es mayor a 6 caracteres" , Toast.LENGTH_LONG);
 						toast.show();
 					}
 				}

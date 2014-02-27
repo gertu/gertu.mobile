@@ -1,19 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#272727"
+    android:layout_height="match_parent"
     tools:context=".SingUp" >
 
     <TextView
+        android:paddingBottom="2dip"
+        android:paddingTop="6dip"
+        android:textColor="#7DC24F"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
         android:layout_width="100dip"
         android:layout_height="wrap_content"
         android:text="@string/EMAIL_SINGUP"
         android:textStyle="bold" />
 
     <EditText
+        android:paddingBottom="2dip"
+        android:paddingTop="6dip"
+        android:textColor="#7DC24F"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
         android:id="@+id/editEmail"
         android:layout_width="150dip"
         android:layout_height="wrap_content"
@@ -22,12 +34,23 @@
         android:maxLength="20" />
 
     <TextView
+        android:paddingBottom="2dip"
+        android:paddingTop="6dip"
+        android:textColor="#7DC24F"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
         android:layout_width="100dip"
         android:layout_height="wrap_content"
         android:text="@string/FIRSTNAME_SINGUP"
         android:textStyle="bold" />
 
     <EditText
+        android:paddingBottom="2dip"
+        android:paddingTop="6dip"
+        android:textColor="#7DC24F"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
         android:id="@+id/edtFName"
         android:layout_width="150dip"
         android:layout_height="wrap_content"
@@ -36,12 +59,23 @@
         android:maxLength="20" />
 
     <TextView
+        android:paddingBottom="2dip"
+        android:paddingTop="6dip"
+        android:textColor="#7DC24F"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
         android:layout_width="100dip"
         android:layout_height="wrap_content"
         android:text="@string/LASTNAME_SINGUP"
         android:textStyle="bold" />
 
     <EditText
+        android:paddingBottom="2dip"
+        android:paddingTop="6dip"
+        android:textColor="#7DC24F"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
         android:id="@+id/edtLName"
         android:layout_width="150dip"
         android:layout_height="wrap_content"
@@ -50,12 +84,23 @@
         android:maxLength="20" />
 
     <TextView
+        android:paddingBottom="2dip"
+        android:paddingTop="6dip"
+        android:textColor="#7DC24F"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
         android:layout_width="100dip"
         android:layout_height="wrap_content"
         android:text="@string/PASS_SINGUP"
         android:textStyle="bold" />
 
     <EditText
+        android:paddingBottom="2dip"
+        android:paddingTop="6dip"
+        android:textColor="#7DC24F"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
         android:id="@+id/edtPassword"
         android:layout_width="150dip"
         android:layout_height="wrap_content"
@@ -64,12 +109,23 @@
         android:maxLength="20" />
 
     <TextView
+        android:paddingBottom="2dip"
+        android:paddingTop="6dip"
+        android:textColor="#7DC24F"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
         android:layout_width="120dip"
         android:layout_height="wrap_content"
         android:text="@string/RPTPASS_SINGUP"
         android:textStyle="bold" />
 
     <EditText
+        android:paddingBottom="2dip"
+        android:paddingTop="6dip"
+        android:textColor="#7DC24F"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
         android:id="@+id/edtRptPassword"
         android:layout_width="150dip"
         android:layout_height="wrap_content"
@@ -78,12 +134,17 @@
         android:maxLength="20" />
 
     <Button
+        android:textColor="#7DC24F"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:background="#ff33677f"
+        android:layout_gravity="center_horizontal"
         android:id="@+id/btnRegister"
         android:layout_width="150dip"
         android:layout_height="40dip"
         android:gravity="center"
         android:enabled="true"
         android:text="@string/BUTTON_SINGUP"
-        android:textColor="#FFFFFF" />
+         />
 
 </LinearLayout>

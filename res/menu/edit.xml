@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_edit_profile"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_edit_profile"/>
+
+    <item
+        android:id="@+id/action_view_profile"
+        android:orderInCategory="200"
+        android:showAsAction="never"
+        android:title="@string/action_view_profile"/>
+
+    <item
+        android:id="@+id/action_logout_profile"
+        android:orderInCategory="300"
+        android:showAsAction="never"
+        android:title="@string/action_logout_profile"/>
+
+</menu>
