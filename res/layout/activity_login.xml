@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:background="#272727"
+    android:background="#fff"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".Login" >
@@ -22,7 +22,7 @@
 		        android:textStyle="bold"
                 android:paddingBottom="2dip"
                 android:paddingTop="6dip"
-                android:textColor="#7DC24F"
+                android:textColor="#609c00"
                 android:textSize="16sp"
 		        android:text="@string/Login_User"
                 />
@@ -32,7 +32,7 @@
 		        android:layout_width="220dip"
                 android:paddingBottom="2dip"
                 android:paddingTop="6dip"
-                android:textColor="#7DC24F"
+                android:textColor="#609c00"
                 android:textSize="16sp"
                 android:textStyle="bold"
 		        android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
 		        android:text="@string/Login_Password"
                 android:paddingBottom="2dip"
                 android:paddingTop="6dip"
-                android:textColor="#7DC24F"
+                android:textColor="#609c00"
                 android:textSize="16sp"
                 android:textStyle="bold"/>
 		     <EditText
@@ -58,15 +58,15 @@
 		        android:layout_marginLeft="30dip"
                 android:paddingBottom="2dip"
                 android:paddingTop="6dip"
-                android:textColor="#7DC24F"
+                android:textColor="#609c00"
                 android:textSize="16sp"
                 android:textStyle="bold"/>
 		
 			<Button
-                android:textColor="#7DC24F"
+                android:textColor="#fff"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:background="#ff33677f"
+                android:background="#609c00"
 		    	android:id="@+id/btnAccess"
 		        android:layout_width="200dip"
 		        android:layout_height="wrap_content"
@@ -75,10 +75,10 @@
 		        android:layout_marginTop="10dip"/>
 		   	
 			<Button
-                android:textColor="#7DC24F"
+                android:textColor="#fff"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:background="#ff33677f"
+                android:background="#609c00"
 		    	android:id="@+id/btnNewUser"
 		        android:layout_width="300dip"
 		        android:layout_height="wrap_content"

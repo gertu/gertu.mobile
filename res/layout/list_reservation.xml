@@ -7,15 +7,24 @@
     android:padding="10dp"
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
-    android:background="#272727">
+    android:background="#fff">
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="2dip"
         android:paddingTop="6dip"
-        android:textColor="#7DC24F"
+        android:textColor="#609c00"
         android:textSize="16sp"
         android:textStyle="bold"
         android:id="@+id/textViewReservation" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dip"
+        android:paddingTop="6dip"
+        android:textColor="#609c00"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:id="@+id/textViewReservationId" />
 </LinearLayout>

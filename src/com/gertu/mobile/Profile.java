@@ -76,7 +76,7 @@ public class Profile  extends Activity {
 
             URL url = null;
             try {
-                url = new URL("http://10.0.2.2:3000" + Home.getUser().getImage());
+                url = new URL("http://www.gertu.info" + Home.getUser().getImage());
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }

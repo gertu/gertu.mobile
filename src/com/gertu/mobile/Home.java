@@ -148,7 +148,7 @@ public class Home extends ListActivity {
                 getUser().set_id("");
                 getUser().setLastName("");
                 TextView lblWelc = (TextView) findViewById(R.id.textViewWel);
-                lblWelc.setText("Bienvenido, pulsa en el menu para loggearte");
+                lblWelc.setText("Bienvenido, pulsa en el menu para entrar");
                 Toast.makeText(getApplicationContext(), "Sesion cerrada",
                         Toast.LENGTH_LONG).show();
                 return true;
@@ -191,23 +191,24 @@ public class Home extends ListActivity {
                 List<NameValuePair> locationList = new ArrayList<NameValuePair>(2);
                 locationList.add(new BasicNameValuePair("userLat", String.valueOf(gertuLocation.getLatitude())));
                 locationList.add(new BasicNameValuePair("userLong", String.valueOf(gertuLocation.getLongitude())));
-                String newUrl = "http://10.0.2.2:3000/api/v1/webData";
+                String newUrl = "http://www.gertu.info/api/v1/webData";
                 ServiceHandler sh = new ServiceHandler();
                 jsonStr = sh.makeServiceCall(newUrl, ServiceHandler.GET, locationList);
             } else {
                 location = false;
                 ServiceHandler sh = new ServiceHandler();
-                String url = "http://10.0.2.2:3000/mobile/v1/deals";
+                String url = "http://www.gertu.info/mobile/v1/deals";
                 jsonStr = sh.makeServiceCall(url, ServiceHandler.GET);
             }
-            Log.d("Json->", jsonStr);
             if (!jsonStr.equals("")) {
                 if (location){
                     try {
                         JSONArray result = new JSONArray(jsonStr);
                         JSONObject jsonObj = result.getJSONObject(0);
                         JSONArray allDeals = jsonObj.getJSONArray("neardeals");
-
+                        if (allDeals.length() == 0) {
+                            location = false;
+                        }
                         // looping through All Deals
                         for (int x = 0; x < allDeals.length(); x++) {
                             JSONObject dealObject = allDeals.getJSONObject(x);
@@ -241,7 +242,8 @@ public class Home extends ListActivity {
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                } else {
+                }
+                if (!location){
                     try {
                         JSONArray allDeals = new JSONArray(jsonStr);
 
@@ -260,9 +262,9 @@ public class Home extends ListActivity {
                             actualDeal.gertuprice = price;
                             actualDeal.shop = shop;
                             actualDeal.price = price;
-                            actualDeal.description = deal.getString("description");
-                            actualDeal._id = deal.getString("_id");
-                            actualDeal.image = deal.getString("image");
+                            actualDeal.description = dealObject.getString("description");
+                            actualDeal._id = dealObject.getString("_id");
+                            actualDeal.image = dealObject.getString("image");
 
                             // tmp hashmap for single contact
                             HashMap<String, String> dealH = new HashMap<String, String>();

@@ -116,7 +116,7 @@ public class SingUp extends Activity implements OnClickListener{
 				singupJson.put("password", pass_singup);
 				
 				StringEntity jsonParams = new StringEntity(singupJson.toString());
-				String result = service.makeServiceCall("http://10.0.2.2:3000/mobile/v1/users", 2, jsonParams);
+				String result = service.makeServiceCall("http://www.gertu.info/mobile/v1/users", 2, jsonParams);
 				System.out.println(result);
                 Intent i = new Intent (getApplicationContext(), RECLOGIN.class);            	
                 startActivity(i);

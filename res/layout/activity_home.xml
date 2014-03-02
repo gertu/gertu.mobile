@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#272727"
+    android:background="#fff"
     tools:context=".Home">
 
     <ListView
@@ -17,18 +17,18 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:textColor="#7DC24F"
+        android:textColor="#609c00"
         android:layout_below="@+id/textViewWel">
 
     </ListView>
 
     <TextView
         android:id="@+id/textViewWel"
-        android:text="Bienvenido, pulsa en el menu para loggearte"
+        android:text="Bienvenido, pulsa en el menu para entrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:textColor="#7DC24F"
+        android:textColor="#609c00"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true" />
 

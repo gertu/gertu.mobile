@@ -54,7 +54,7 @@ public class Reservation extends ListActivity {
         protected Void doInBackground(Void... arg0) {
             // Creating service handler class instance
             String jsonStr;
-            String newUrl = "http://10.0.2.2:3000/mobile/v1/users/reservations";
+            String newUrl = "http://www.gertu.info/mobile/v1/users/reservations";
             JSONObject jO = new JSONObject();
             try {
                 jO.put("token", Home.getUser().getToken());
@@ -69,7 +69,6 @@ public class Reservation extends ListActivity {
             }
             ServiceHandlerJson sh = new ServiceHandlerJson();
             jsonStr = sh.makeServiceCall(newUrl, ServiceHandler.POST, se);
-            Log.d("call Reserv", jsonStr);
             if (!jsonStr.equals("")) {
                 try {
 
@@ -83,16 +82,19 @@ public class Reservation extends ListActivity {
                         HashMap<String, String> reservH = new HashMap<String, String>();
 
                         String jsonStrRes;
-                        String shopURL = "http://10.0.2.2:3000/mobile/v1/deals/" + name;
+                        String shopURL = "http://www.gertu.info/mobile/v1/deals/" + name;
                         ServiceHandler shRes = new ServiceHandler();
                         jsonStrRes = shRes.makeServiceCall(shopURL, ServiceHandler.GET);
 
 
                         JSONObject deal = new JSONObject(jsonStrRes);
-                        String nameOfTheShop = deal.getString("name");
+                        String nameOfTheDeal = deal.getString("name");
+                        String codeOfTheDeal = dealObject.getString("_id");
 
                         // adding each child node to HashMap key => value
-                        reservH.put("textViewReservation", nameOfTheShop);
+                        reservH.put("textViewReservation", "Oferta: "+nameOfTheDeal);
+                        reservH.put("textViewReservationId", "Codigo de reserva: "+codeOfTheDeal);
+
 
                         // adding deal to deals list
                         reservationList.add(reservH);
@@ -116,8 +118,8 @@ public class Reservation extends ListActivity {
 
             ListAdapter adapterR = new SimpleAdapter(
                     Reservation.this, reservationList,
-                    R.layout.list_reservation, new String[]{"textViewReservation"
-            }, new int[]{R.id.textViewReservation});
+                    R.layout.list_reservation, new String[]{"textViewReservation", "textViewReservationId"
+            }, new int[]{R.id.textViewReservation, R.id.textViewReservationId});
 
             setListAdapter(adapterR);
         }

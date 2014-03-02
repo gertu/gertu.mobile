@@ -7,7 +7,7 @@
     <string name="action_settings">Settings</string>
     <string name="send_comment_tag">Enviar Comentario</string>
     <string name="comment_tag">Escribe un comentario</string>
-    <string name="Wel_tag">Bienvenido, pulsa en el menu para loggearte</string>
+    <string name="Wel_tag">Bienvenido, pulsa en el menu para logearte</string>
 
 
     <!-- LOGIN -->

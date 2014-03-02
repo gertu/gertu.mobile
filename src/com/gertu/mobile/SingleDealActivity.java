@@ -7,7 +7,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -86,7 +85,7 @@ public class SingleDealActivity extends Activity {
             if (Home.getUser().getToken() == null){
                 return null;
             }
-            String urlComent = "http://10.0.2.2:3000/mobile/v1/deals/" + id + "/comment";
+            String urlComent = "http://www.gertu.info/mobile/v1/deals/" + id + "/comment";
             ServiceHandlerJson shj = new ServiceHandlerJson();
             RatingBar rat = (RatingBar)findViewById(R.id.ratingBar);
             String rating = String.valueOf(rat.getRating()*2);
@@ -107,8 +106,6 @@ public class SingleDealActivity extends Activity {
                 e.printStackTrace();
             }
             String jsonStr = shj.makeServiceCall(urlComent,ServiceHandlerJson.POST, se);
-            Log.d("ComentarioURL", urlComent);
-            Log.d("Comentario", jsonStr);
             return null;
         }
 
@@ -119,7 +116,7 @@ public class SingleDealActivity extends Activity {
                 Toast.makeText(getApplicationContext(), "Comentario enviado",
                     Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(getApplicationContext(), "Tienes que estar loggeado para comentar",
+                Toast.makeText(getApplicationContext(), "Tienes que estar logeado para comentar",
                         Toast.LENGTH_LONG).show();
             }
             finish();
@@ -141,7 +138,7 @@ public class SingleDealActivity extends Activity {
             }
             ServiceHandlerJson shj = new ServiceHandlerJson();
             JSONObject jO = new JSONObject();
-            String newUrl = "http://10.0.2.2:3000/mobile/v1/deals/" + id + "/reservation";
+            String newUrl = "http://www.gertu.info/mobile/v1/deals/" + id + "/reservation";
             try {
                 jO.put("token", Home.getUser().getToken());
             } catch (JSONException e){
@@ -154,7 +151,6 @@ public class SingleDealActivity extends Activity {
                 e.printStackTrace();
             }
             String jsonStr = shj.makeServiceCall(newUrl,ServiceHandlerJson.POST, se);
-            Log.d("Reserva", jsonStr);
             return null;
         }
 
@@ -166,7 +162,7 @@ public class SingleDealActivity extends Activity {
                 Toast.makeText(getApplicationContext(), "Reserva realizada",
                         Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(getApplicationContext(), "Tienes que estar loggeado para reservar",
+                Toast.makeText(getApplicationContext(), "Tienes que estar logeado para reservar",
                     Toast.LENGTH_LONG).show();
             }
             finish();
@@ -191,7 +187,7 @@ public class SingleDealActivity extends Activity {
         protected Void doInBackground(Void... arg0) {
             // Creating service handler class instance
             String jsonStr;
-            String newUrl = "http://10.0.2.2:3000/mobile/v1/shopInfo/" + idShop;
+            String newUrl = "http://www.gertu.info/mobile/v1/shopInfo/" + idShop;
             ServiceHandler sh = new ServiceHandler();
             jsonStr = sh.makeServiceCall(newUrl, ServiceHandler.GET);
             nameShop = "Tienda: " + jsonStr;
@@ -214,7 +210,7 @@ public class SingleDealActivity extends Activity {
 
             URL url = null;
             try {
-                url = new URL("http://10.0.2.2:3000" + imageUrl);
+                url = new URL("http://www.gertu.info" + imageUrl);
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }

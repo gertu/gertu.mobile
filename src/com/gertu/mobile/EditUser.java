@@ -1,20 +1,18 @@
 package com.gertu.mobile;
 
-import java.io.UnsupportedEncodingException;
+import android.app.Activity;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
 
 import org.apache.http.entity.StringEntity;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.os.AsyncTask;
-import android.os.Bundle;
-import android.app.Activity;
-import android.view.Menu;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
+import java.io.UnsupportedEncodingException;
 
 public class EditUser extends Activity implements OnClickListener{
 	
@@ -103,7 +101,7 @@ public class EditUser extends Activity implements OnClickListener{
 				System.out.println(editUserJSon.toString());
 				StringEntity jsonParams = new StringEntity(editUserJSon.toString());
 				
-				String result = service.makeServiceCall("http://10.0.2.2:3000/mobile/v1/users", 3, jsonParams);
+				String result = service.makeServiceCall("http://www.gertu.info/mobile/v1/users", 3, jsonParams);
 				
 				System.out.println(result);
 				

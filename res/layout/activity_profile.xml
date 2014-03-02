@@ -3,7 +3,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:background="#272727"
+    android:background="#fff"
     android:layout_height="match_parent">
 
     <ScrollView
@@ -14,16 +14,15 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:background="#272727"
+            android:background="#fff"
             android:layout_height="match_parent">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nombre"
                 android:id="@+id/textView"
-                android:paddingBottom="2dip"
                 android:paddingTop="6dip"
-                android:textColor="#7DC24F"
+                android:textColor="#609c00"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_gravity="center_horizontal" />
@@ -33,19 +32,18 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="2dip"
                 android:paddingTop="6dip"
-                android:textColor="#7DC24F"
+                android:textColor="#609c00"
                 android:textSize="16sp"
-                android:textStyle="bold"
                 android:id="@+id/textViewNameProfile"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_horizontal"
+                android:textStyle="italic" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Email"
-                android:paddingBottom="2dip"
                 android:paddingTop="6dip"
-                android:textColor="#7DC24F"
+                android:textColor="#609c00"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:id="@+id/textView3"
@@ -56,11 +54,11 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="2dip"
                 android:paddingTop="6dip"
-                android:textColor="#7DC24F"
+                android:textColor="#609c00"
                 android:textSize="16sp"
-                android:textStyle="bold"
                 android:id="@+id/textViewEmailProfile"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_horizontal"
+                android:textStyle="italic" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -68,7 +66,7 @@
                 android:text="Foto de perfil"
                 android:paddingBottom="2dip"
                 android:paddingTop="6dip"
-                android:textColor="#7DC24F"
+                android:textColor="#609c00"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:id="@+id/textView5"
@@ -87,11 +85,12 @@
                 android:layout_height="wrap_content"
                 android:text="Ver mis reservas"
                 android:id="@+id/buttonRes"
-                android:textColor="#7DC24F"
+                android:textColor="#fff"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:background="#ff33677f"
-                android:layout_gravity="center_horizontal" />
+                android:background="#609c00"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp" />
 
         </LinearLayout>
     </ScrollView>

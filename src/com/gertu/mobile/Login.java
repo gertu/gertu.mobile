@@ -6,7 +6,6 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -111,8 +110,7 @@ public class Login extends Activity {
         	} catch (UnsupportedEncodingException e) {
         		e.printStackTrace();
         	}
-        	jsonStr = shj.makeServiceCall("http://10.0.2.2:3000/mobile/v1/users/session",ServiceHandlerJson.POST, se);
-        	Log.d("User", jsonStr);
+        	jsonStr = shj.makeServiceCall("http://www.gertu.info/mobile/v1/users/session",ServiceHandlerJson.POST, se);
         	try {
             	
                 if(jsonStr=="403"){

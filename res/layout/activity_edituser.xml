@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#272727"
+    android:background="#fff"
     android:gravity="center"
     android:orientation="vertical" >
 
@@ -11,7 +11,7 @@
     <TextView
         android:paddingBottom="2dip"
         android:paddingTop="6dip"
-        android:textColor="#7DC24F"
+        android:textColor="#609c00"
         android:textSize="16sp"
         android:layout_width="100dip"
         android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
         android:maxLength="20"
         android:paddingBottom="2dip"
         android:paddingTop="6dip"
-        android:textColor="#7DC24F"
+        android:textColor="#609c00"
         android:textSize="16sp"
         android:textStyle="bold"/>
 
@@ -38,7 +38,7 @@
         android:text="@string/FIRSTNAME_EDITUSER"
         android:paddingBottom="2dip"
         android:paddingTop="6dip"
-        android:textColor="#7DC24F"
+        android:textColor="#609c00"
         android:textSize="16sp"
         android:textStyle="bold"/>
 
@@ -51,7 +51,7 @@
         android:maxLength="20"
         android:paddingBottom="2dip"
         android:paddingTop="6dip"
-        android:textColor="#7DC24F"
+        android:textColor="#609c00"
         android:textSize="16sp"
         android:textStyle="bold"/>
 
@@ -61,7 +61,7 @@
         android:text="@string/LASTNAME_EDITUSER"
         android:paddingBottom="2dip"
         android:paddingTop="6dip"
-        android:textColor="#7DC24F"
+        android:textColor="#609c00"
         android:textSize="16sp"
         android:textStyle="bold"/>
 
@@ -74,7 +74,7 @@
         android:maxLength="20"
         android:paddingBottom="2dip"
         android:paddingTop="6dip"
-        android:textColor="#7DC24F"
+        android:textColor="#609c00"
         android:textSize="16sp"
         android:textStyle="bold"/>
    

@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#272727"
+    android:background="#fff"
     android:padding="10dp"
     android:weightSum="1">
     <!-- Name Label -->
@@ -17,7 +17,7 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#272727"
+            android:background="#fff"
             android:padding="10dp"
             android:weightSum="1">
 
@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="2dip"
                 android:paddingTop="6dip"
-                android:textColor="#7DC24F"
+                android:textColor="#609c00"
                 android:textSize="16sp"
                 android:textStyle="bold"/>
             <!-- Price Label -->
@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="2dip"
                 android:paddingTop="6dip"
-                android:textColor="#7DC24F"
+                android:textColor="#609c00"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:text="string/price_tag" />
@@ -49,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="2dip"
                 android:paddingTop="6dip"
-                android:textColor="#7DC24F"
+                android:textColor="#609c00"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:text="string/shop_tag" />
@@ -67,17 +67,17 @@
                 android:layout_height="wrap_content"
                 android:text="Reservar"
                 android:id="@+id/buttonReserv"
-                android:textColor="#7DC24F"
+                android:textColor="#fff"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:background="#ff33677f" />
+                android:background="#609c00" />
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:paddingBottom="2dip"
                 android:paddingTop="6dip"
-                android:textColor="#7DC24F"
+                android:textColor="#609c00"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:text="@string/comment_tag"
@@ -105,10 +105,10 @@
                 android:text="@string/send_comment_tag"
                 android:id="@+id/buttonComment"
                 android:layout_gravity="center_horizontal"
-                android:textColor="#7DC24F"
+                android:textColor="#fff"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:background="#ff33677f"
+                android:background="#609c00"
                 android:singleLine="false" />
             </LinearLayout>
     </ScrollView>

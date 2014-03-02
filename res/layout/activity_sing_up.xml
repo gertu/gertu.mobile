@@ -4,14 +4,14 @@
     android:gravity="center"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:background="#272727"
+    android:background="#fff"
     android:layout_height="match_parent"
     tools:context=".SingUp" >
 
     <TextView
         android:paddingBottom="2dip"
         android:paddingTop="6dip"
-        android:textColor="#7DC24F"
+        android:textColor="#609c00"
         android:textSize="16sp"
         android:layout_gravity="center_horizontal"
         android:layout_width="100dip"
@@ -22,7 +22,7 @@
     <EditText
         android:paddingBottom="2dip"
         android:paddingTop="6dip"
-        android:textColor="#7DC24F"
+        android:textColor="#609c00"
         android:textSize="16sp"
         android:textStyle="bold"
         android:layout_gravity="center_horizontal"
@@ -36,7 +36,7 @@
     <TextView
         android:paddingBottom="2dip"
         android:paddingTop="6dip"
-        android:textColor="#7DC24F"
+        android:textColor="#609c00"
         android:textSize="16sp"
         android:layout_gravity="center_horizontal"
         android:layout_width="100dip"
@@ -47,7 +47,7 @@
     <EditText
         android:paddingBottom="2dip"
         android:paddingTop="6dip"
-        android:textColor="#7DC24F"
+        android:textColor="#609c00"
         android:textSize="16sp"
         android:textStyle="bold"
         android:layout_gravity="center_horizontal"
@@ -61,7 +61,7 @@
     <TextView
         android:paddingBottom="2dip"
         android:paddingTop="6dip"
-        android:textColor="#7DC24F"
+        android:textColor="#609c00"
         android:textSize="16sp"
         android:layout_gravity="center_horizontal"
         android:layout_width="100dip"
@@ -72,7 +72,7 @@
     <EditText
         android:paddingBottom="2dip"
         android:paddingTop="6dip"
-        android:textColor="#7DC24F"
+        android:textColor="#609c00"
         android:textSize="16sp"
         android:textStyle="bold"
         android:layout_gravity="center_horizontal"
@@ -86,7 +86,7 @@
     <TextView
         android:paddingBottom="2dip"
         android:paddingTop="6dip"
-        android:textColor="#7DC24F"
+        android:textColor="#609c00"
         android:textSize="16sp"
         android:layout_gravity="center_horizontal"
         android:layout_width="100dip"
@@ -97,7 +97,7 @@
     <EditText
         android:paddingBottom="2dip"
         android:paddingTop="6dip"
-        android:textColor="#7DC24F"
+        android:textColor="#609c00"
         android:textSize="16sp"
         android:textStyle="bold"
         android:layout_gravity="center_horizontal"
@@ -111,7 +111,7 @@
     <TextView
         android:paddingBottom="2dip"
         android:paddingTop="6dip"
-        android:textColor="#7DC24F"
+        android:textColor="#609c00"
         android:textSize="16sp"
         android:layout_gravity="center_horizontal"
         android:layout_width="120dip"
@@ -122,7 +122,7 @@
     <EditText
         android:paddingBottom="2dip"
         android:paddingTop="6dip"
-        android:textColor="#7DC24F"
+        android:textColor="#609c00"
         android:textSize="16sp"
         android:textStyle="bold"
         android:layout_gravity="center_horizontal"
@@ -134,10 +134,10 @@
         android:maxLength="20" />
 
     <Button
-        android:textColor="#7DC24F"
+        android:textColor="#fff"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:background="#ff33677f"
+        android:background="#609c00"
         android:layout_gravity="center_horizontal"
         android:id="@+id/btnRegister"
         android:layout_width="150dip"
